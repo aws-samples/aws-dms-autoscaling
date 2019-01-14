@@ -1,0 +1,23 @@
+{
+	"Records": [{
+			"EventSource": "aws:sns",
+			"EventVersion": "1.0",
+			"EventSubscriptionArn": "arn:aws:sns:us-west-2:365610231659:dmsautoscaler:5a7b87d7-981c-4753-b880-a65fca3df215",
+			"Sns": {
+				"Type": "Notification",
+				"MessageId": "4c7edc3f-73ca-5a17-b578-88968f3a523b",
+				"TopicArn": "arn:aws:sns:us-west-2:365610231659:dmsautoscaler",
+				"Subject": "ALARM: 'dms_memory_high' in US West (Oregon)",
+				"Message": "{     'AlarmName': 'dms_cpu_low',     'AlarmDescription': 'dms_cpu_low',     'AWSAccountId': '365610231659',     'NewStateValue': 'ALARM',     'NewStateReason': 'Threshold Crossed: 1 out of the last 1 datapoints [1.41666666666661 (24/01/18 04:21:00)] was greater than or equal to the threshold (1.0) (minimum 1 datapoint for OK -> ALARM transition).',     'StateChangeTime': '2018-01-24T04:24:11.903+0000',     'Region': 'US West (Oregon)',     'OldStateValue': 'INSUFFICIENT_DATA',     'Trigger': {         'MetricName': 'CPUUtilization',         'Namespace': 'AWS/DMS',         'StatisticType': 'Statistic',         'Statistic': 'AVERAGE',         'Unit': null,         'Dimensions': [{             'name': 'ReplicationInstanceIdentifier',             'value': 'dms1'         }],         'Period': 60,         'EvaluationPeriods': 1,         'ComparisonOperator': 'GreaterThanOrEqualToThreshold',         'Threshold': 51,         'TreatMissingData': '',         'EvaluateLowSampleCountPercentile': ''     } }",
+			"Timestamp": "2019-01-05T00:30:40.186Z",
+			"SignatureVersion": "1",
+			"Signature": "KzdLZ4+cEL4xoG0Sx2cvXoEW/X3ZntMIpriIrpKUlcU8tnTybvrR0D5STSSLr2B5q0gu+a1P3HhftCG9MLuGPPLzRF6gRHleuQDhX8lxMbQps9Mn3U/H9hmEJJKk2Z0E54oD5MUVlJNLM66KNO/bmZH64Ij5KeqBGwAGZu09WEKQtsGvH+YE6VsZeQuRnpT5VsQ5AjtjoxEYY73MpYBsVONdCrtvQEl3+YF0ej62a/v5m3LyF/K5TNNU/aKMCqnZtvHDLzUll7hKATZM/p/1d/N2sYT/6k8utelKdEpXlF+PQk3nBoVU47AOuApYzDwiWKde8Ia5C59h7BOn05/p1g==",
+			"SigningCertUrl": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-ac565b8b1a6c5d002d285f9598aa1d9b.pem",
+			"UnsubscribeUrl": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:365610231659:dmsautoscaler:5a7b87d7-981c-4753-b880-a65fca3df215",
+			"MessageAttributes": {
+
+			}
+		}
+	}
+]
+}

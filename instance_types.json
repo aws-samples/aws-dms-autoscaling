@@ -1,0 +1,58 @@
+{
+    "version": "2.4.2",
+    "autoscaling_up_enabled": "true",
+    "autoscaling_down_enabled": "true",
+    "timeout": 10,
+    "dms.t2.micro": {
+        "cpu_high": "dms.t2.small",
+        "cpu_low": "no_action"
+    },
+    "dms.t2.small": {
+        "cpu_high": "dms.t2.medium",
+        "cpu_low": "dms.t2.micro"
+    },
+    "dms.t2.medium": {
+        "cpu_high": "dms.t2.large",
+        "cpu_low": "dms.t2.small"
+    },
+    "dms.t2.large": {
+        "cpu_high": "dms.c4.large",
+        "cpu_low": "dms.t2.medium"
+    },
+    "dms.c4.large": {
+        "cpu_high": "dms.c4.xlarge",
+        "cpu_low": "no_action"
+    },
+    "dms.c4.xlarge": {
+        "cpu_high": "dms.c4.2xlarge",
+        "cpu_low": "dms.c4.large"
+    },
+    "dms.c4.2xlarge": {
+        "cpu_high": "dms.c4.4xlarge",
+        "cpu_low": "dms.c4.xlarge"
+    },
+    "dms.c4.4xlarge": {
+        "cpu_high": "dms.r4.8xlarge",
+        "cpu_low": "dms.c4.2xlarge"
+    },
+    "dms.r4.large": {
+        "cpu_high": "dms.r4.xlarge",
+        "cpu_low": "no_action"
+    },
+    "dms.r4.xlarge": {
+        "cpu_high": "dms.r4.2xlarge",
+        "cpu_low": "dms.r4.large"
+    },
+    "dms.r4.2xlarge": {
+        "cpu_high": "dms.r4.4xlarge",
+        "cpu_low": "dms.r4.xlarge"
+    },
+    "dms.r4.4xlarge": {
+        "cpu_high": "dms.r4.8xlarge",
+        "cpu_low": "dms.r4.2xlarge"
+    },
+    "dms.r4.8xlarge": {
+        "cpu_high": "no_action",
+        "cpu_low": "dms.r4.4xlarge"
+    }
+}

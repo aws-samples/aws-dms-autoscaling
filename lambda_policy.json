@@ -1,0 +1,73 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Sid": "Stmt1528434137827",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "Stmt1528434233173",
+            "Action": [
+                "dms:DescribeReplicationInstances",
+                "dms:DescribeReplicationTasks",
+                "dms:ModifyReplicationInstance"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "Stmt1528473909949",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+            "Sid": "Stmt1528473909943",
+            "Action": [
+                "cloudwatch:DeleteAlarms",
+                "cloudwatch:EnableAlarmActions",
+                "cloudwatch:GetMetricData",
+                "cloudwatch:PutMetricAlarm",
+                "cloudwatch:SetAlarmState"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "Stmt1528473949712",
+            "Action": [
+                "events:DeleteRule",
+                "events:EnableRule",
+                "events:PutRule",
+                "events:PutTargets",
+                "events:RemoveTargets"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Sid": "Stmt1528474058666",
+            "Action": [
+                "lambda:AddPermission",
+                "lambda:RemovePermission"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:lambda:*:*:function:*"
+        },
+        {
+            "Sid": "Stmt1528474139639",
+            "Action": [
+                "sns:Publish"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+	"AlarmName": "dms_cpu_high",
+	"AlarmDescription": "dms_cpu_high",
+	"AWSAccountId": "365610231659",
+	"NewStateValue": "ALARM",
+	"NewStateReason": "Threshold Crossed: 1 out of the last 1 datapoints [1.41666666666661 (24/01/18 04:21:00)] was greater than or equal to the threshold (1.0) (minimum 1 datapoint for OK -> ALARM transition).",
+	"StateChangeTime": "2018-01-24T04:24:11.903+0000",
+	"Region": "US West (Oregon)",
+	"OldStateValue": "INSUFFICIENT_DATA",
+	"Trigger": {
+		"MetricName": "CPUUtilization",
+		"Namespace": "AWS/DMS",
+		"StatisticType": "Statistic",
+		"Statistic": "AVERAGE",
+		"Unit": null,
+		"Dimensions": [
+			{
+				"name": "ReplicationInstanceIdentifier",
+				"value": "dms1"
+			}
+		],
+		"Period": 60,
+		"EvaluationPeriods": 1,
+		"ComparisonOperator": "GreaterThanOrEqualToThreshold",
+		"Threshold": 51,
+		"TreatMissingData": "",
+		"EvaluateLowSampleCountPercentile": ""
+	}
+}

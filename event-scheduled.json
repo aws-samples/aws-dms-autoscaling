@@ -1,0 +1,9 @@
+{
+    "replication_instance": "dms5",
+    "existing_tasks": [{
+        "ReplicationTaskIdentifier": "dms5-task1",
+        "Status": "ready",
+        "ReplicationTaskArn": "arn:aws:dms:us-west-2:107995894928:task:Z4X2Q2PYSQH553OVOP52G2KXJA"
+    }],
+    "start_time": 1528400367.1089563
+}
