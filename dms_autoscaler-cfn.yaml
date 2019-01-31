@@ -147,7 +147,7 @@ Resources:
       Dimensions:
       - Name: ReplicationInstanceIdentifier
         Value:
-          Ref: DMSInstance
+          Ref: DMSReplicationInstanceName
       AlarmDescription: High CPU usage by DMS instance.
       AlarmName: dms_cpu_high
   cloudWatchLowCPUAlarm:
@@ -166,7 +166,7 @@ Resources:
       Dimensions:
       - Name: ReplicationInstanceIdentifier
         Value:
-          Ref: DMSInstance
+          Ref: DMSReplicationInstanceName
       AlarmDescription: Low CPU usage by DMS instance.
       AlarmName: dms_cpu_low
 Outputs:
