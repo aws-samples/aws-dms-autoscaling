@@ -6,7 +6,7 @@
                 "s3:GetObject"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": "<s3 bucket arn where you intend to store the confoguration file>"
         },
         {
             "Sid": "Stmt1528434233173",
@@ -16,7 +16,7 @@
                 "dms:ModifyReplicationInstance"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": "<your DMS replication instance arn>"
         },
         {
             "Sid": "Stmt1528473909949",
@@ -38,7 +38,7 @@
                 "cloudwatch:SetAlarmState"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": ["arn:aws:cloudwatch:::alarm:dms_cpu_high", "arn:aws:cloudwatch:::alarm:dms_cpu_low"]
         },
         {
             "Sid": "Stmt1528473949712",
@@ -50,7 +50,7 @@
                 "events:RemoveTargets"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": "arn:aws:events::107995894928:rule/dms-scheduled-event*"
         },
         {
             "Sid": "Stmt1528474058666",
@@ -59,7 +59,7 @@
                 "lambda:RemovePermission"
             ],
             "Effect": "Allow",
-            "Resource": "arn:aws:lambda:*:*:function:*"
+            "Resource": "arn:aws:lambda:*:*:function:dms_autoscaler_cf"
         },
         {
             "Sid": "Stmt1528474139639",
@@ -67,7 +67,7 @@
                 "sns:Publish"
             ],
             "Effect": "Allow",
-            "Resource": "*"
+            "Resource": "<your sns topic name>"
         }
     ]
 }

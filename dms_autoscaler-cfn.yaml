@@ -64,7 +64,7 @@ Resources:
             - cloudwatch:GetMetricData
             - cloudwatch:PutMetricAlarm
             Effect: Allow
-            Resource: "*"
+            Resource: ["arn:aws:cloudwatch:::alarm:dms_cpu_high", "arn:aws:cloudwatch:::alarm:dms_cpu_low"]
           - Sid: Stmt1528473949712
             Action:
             - events:DeleteRule
@@ -73,7 +73,7 @@ Resources:
             - events:PutTargets
             - events:RemoveTargets
             Effect: Allow
-            Resource: "*"
+            Resource: "arn:aws:events::107995894928:rule/dms-scheduled-event*"
           - Sid: Stmt1528474058666
             Action:
             - lambda:AddPermission
